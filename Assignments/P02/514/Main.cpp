@@ -8,8 +8,9 @@ using namespace std;
 
 int main(){
     //array of 1000 to store coaches
-    int coaches[1000];
+    vector <int> coaches;
     stack <int> s;
+    int coach_id;
 
     bool correct;
     int index;
@@ -19,9 +20,13 @@ int main(){
         if(cases == 0)
         break;
 
-        while(cin >>coaches[0]){
-            if(coaches[0]==0)
+        while(cin >> coach_id){
+            if(coach_id==0){
             break;
+            }
+        else{
+        coaches.push_back(coach_id);
+        }
             //check if the stack is empty 
             while(!s.empty())
             s.pop();
@@ -29,8 +34,10 @@ int main(){
             index =1;
             correct = true;
 
-            for(int i = 1; i<cases;i++)
-            cin>> coaches[i];
+            for(int i = 1; i<cases;i++){
+            cin>> coach_id;
+            coaches.push_back(coach_id);
+            }
             //if the counter and the coach is equal
             for(int j=0;j<cases;j++){
                 if(coaches[j]==index){
