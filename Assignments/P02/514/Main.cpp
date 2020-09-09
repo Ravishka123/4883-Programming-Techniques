@@ -24,9 +24,9 @@ int main(){
             if(coach_id==0){
             break;
             }
-        else{
+        
         coaches.push_back(coach_id);
-        }
+        
             //check if the stack is empty 
             while(!s.empty())
             s.pop();
@@ -79,6 +79,7 @@ int main(){
 
         }
         cout << endl;
+        coaches.clear();
     }
     return 0;
 }
