@@ -18,7 +18,7 @@ int Compare(char f[], char num[])
     }
     for (i = 0; i < l; i++)
     {
-        if (fff[i] > num[i])
+        if (f[i] > num[i])
             return 1;
         else if (f[i] < num[i])
             return -1;
